@@ -1,5 +1,8 @@
 package com.hms.model;
+/*
+@ASM Tamzid
 
+*/
 public class PathologicalTest {
     String title;
     double cost;
