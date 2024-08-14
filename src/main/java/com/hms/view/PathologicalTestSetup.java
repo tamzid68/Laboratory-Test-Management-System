@@ -6,9 +6,10 @@ package com.hms.view;
 import com.hms.model.PathologicalTest;
 
 /**
- *
- * @author Windows-10
- */
+* 
+*@author Tamzid
+*
+*/
 public class PathologicalTestSetup extends javax.swing.JFrame {
 
     /**

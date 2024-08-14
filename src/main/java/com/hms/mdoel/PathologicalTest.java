@@ -1,5 +1,9 @@
 package com.hms.model;
-
+/**
+* 
+*@author Tamzid
+*
+*/
 public class PathologicalTest {
     String title;
     double cost;
