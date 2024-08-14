@@ -1,7 +1,11 @@
 
 package com.hms.view;
 import com.hms.view.PathologicalTestSetup;
-
+/**
+* 
+*@author Tamzid
+*
+*/
 public class Home extends javax.swing.JFrame {
 
 

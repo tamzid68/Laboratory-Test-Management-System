@@ -8,9 +8,10 @@ import com.hms.model.PathologicalTest;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Windows-10
- */
+* 
+*@author Tamzid
+*
+*/
 public class PathologicalTestSearch extends javax.swing.JFrame {
 
  public PathologicalTestSearch() {

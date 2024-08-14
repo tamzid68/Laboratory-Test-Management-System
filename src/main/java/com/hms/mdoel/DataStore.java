@@ -1,5 +1,9 @@
 package com.hms.model;
-
+/**
+* 
+*@author Tamzid
+*
+*/
 import java.util.ArrayList;
 import java.util.List;
 
