@@ -16,9 +16,11 @@ public class PathologicalTest {
     }
 
     public String show() {
-        return "Test name: " + this.title + "\n" +
-               "Cost: " + this.cost + "\n" +
-               "Available: " + this.isAvailable;
+        return "<html>" +
+               "<strong>Test Name:</strong> " + this.title + "<br>" +
+               "<strong>Cost:</strong> " + String.format("%.2f", this.cost) + "TK<br>" +
+               "<strong>Available:</strong> " + (this.isAvailable ? "Yes" : "No") +
+               "</html>";
     }
 
     public static String search(String title) {
