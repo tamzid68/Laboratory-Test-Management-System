@@ -102,26 +102,7 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(checkBox)
-                                    .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(checkBox)
-                                    .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-
                                 .addComponent(checkBox))))
-
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(checkBox))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(3, 3, 3)
-                                        .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-
-
                     .addGroup(layout.createSequentialGroup()
                         .addGap(184, 184, 184)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -129,7 +110,10 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnSubmit)
                                 .addGap(68, 68, 68)
-                                .addComponent(btnCancel)))))
+                                .addComponent(btnCancel))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(214, 214, 214)
+                        .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(157, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
