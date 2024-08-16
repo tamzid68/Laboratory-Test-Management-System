@@ -22,11 +22,16 @@ public class PathologicalTest {
                "<strong>Available:</strong> " + (this.isAvailable ? "Yes" : "No") +
                "</html>";
     }
+    public String showForSearch(){
+        return "Test Name: "+this.title+"\n"+
+                "Cost: "+this.cost+"\n"+
+                "Available: "+(this.isAvailable ? "Yes" : "No");
+    }
 
     public static String search(String title) {
         for (PathologicalTest test : DataStore.tests) {  // Access the list in DataStore
             if (test.title.equalsIgnoreCase(title)) {
-                return test.show();
+                return test.showForSearch();
             }
         }
         return "Not found";
