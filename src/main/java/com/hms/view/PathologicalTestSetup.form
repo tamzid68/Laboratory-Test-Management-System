@@ -57,8 +57,13 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
+<<<<<<< Updated upstream
                       <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
                       <Component id="success" min="-2" pref="182" max="-2" attributes="0"/>
+=======
+                      <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
+                      <Component id="success" min="-2" pref="178" max="-2" attributes="0"/>
+>>>>>>> Stashed changes
                   </Group>
               </Group>
               <EmptySpace pref="157" max="32767" attributes="0"/>

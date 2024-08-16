@@ -112,8 +112,13 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
                                 .addGap(68, 68, 68)
                                 .addComponent(btnCancel))))
                     .addGroup(layout.createSequentialGroup()
+<<<<<<< Updated upstream
                         .addGap(214, 214, 214)
                         .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
+=======
+                        .addGap(208, 208, 208)
+                        .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
+>>>>>>> Stashed changes
                 .addContainerGap(157, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
