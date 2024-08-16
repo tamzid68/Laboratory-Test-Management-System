@@ -27,9 +27,11 @@ public class PathologicalTestSearch extends javax.swing.JFrame {
         }
 
         // Use the search method from PathologicalTest class that uses DataStore
+        else{
         String result = PathologicalTest.search(searchQuery);  // Directly call search
         searchOutput.setText(result);  // Display the result in the text area
-    }
+        }
+      }
 
     /**
      * This method is called from within the constructor to initialize the form.

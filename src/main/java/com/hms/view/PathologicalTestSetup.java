@@ -36,6 +36,8 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
         checkBox = new javax.swing.JCheckBox();
         btnSubmit = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
+        outputTest = new javax.swing.JLabel();
+        success = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +80,8 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
             }
         });
 
+        success.setForeground(java.awt.Color.green);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -97,24 +101,19 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
                                 .addComponent(txtCost, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-<<<<<<< Updated upstream
                                 .addGap(18, 18, 18)
-                                .addComponent(checkBox))))
-=======
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(checkBox))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(3, 3, 3)
-                                        .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))))))
->>>>>>> Stashed changes
+                                    .addComponent(checkBox)
+                                    .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(184, 184, 184)
-                        .addComponent(btnSubmit)
-                        .addGap(68, 68, 68)
-                        .addComponent(btnCancel)))
-                .addContainerGap(365, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(outputTest, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnSubmit)
+                                .addGap(68, 68, 68)
+                                .addComponent(btnCancel)))))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,11 +130,15 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(checkBox))
-                .addGap(65, 65, 65)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSubmit)
                     .addComponent(btnCancel))
-                .addContainerGap(206, Short.MAX_VALUE))
+                .addGap(43, 43, 43)
+                .addComponent(outputTest, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         pack();
@@ -150,13 +153,29 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCostActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-       String title = txtTitle.getText();
-       double cost = Double.parseDouble(txtCost.getText());
-       boolean isAvailable = checkBox.isSelected();
+      
+       if (txtTitle.getText().isEmpty() || txtCost.getText().isEmpty()) {
+        success.setForeground(java.awt.Color.red);
+        success.setText("Error: All fields are required!");
+    } else {
+        try {
+            String title = txtTitle.getText();
+            double cost = Double.parseDouble(txtCost.getText());
+            boolean isAvailable = checkBox.isSelected();
+            
+            PathologicalTest pt = new PathologicalTest(title, cost, isAvailable);
+            success.setForeground(java.awt.Color.green);
+            success.setText("Add Success!");
+            outputTest.setText(pt.show());
+            
+        } catch (NumberFormatException e) {
+            success.setForeground(java.awt.Color.red);
+            success.setText("Error: Invalid cost format!");
        
-       PathologicalTest pt = new PathologicalTest(title, cost, isAvailable);
-        
        
+       }
+       
+       }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void checkBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxActionPerformed
@@ -209,6 +228,8 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel outputTest;
+    private javax.swing.JLabel success;
     private javax.swing.JTextField txtCost;
     private javax.swing.JTextField txtTitle;
     // End of variables declaration//GEN-END:variables
