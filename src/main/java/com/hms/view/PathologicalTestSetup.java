@@ -28,24 +28,27 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        labelTitle = new javax.swing.JLabel();
+        labelCost = new javax.swing.JLabel();
+        labelAvailable = new javax.swing.JLabel();
         txtTitle = new javax.swing.JTextField();
         txtCost = new javax.swing.JTextField();
-        checkBox = new javax.swing.JCheckBox();
+        checkBoxAvailable = new javax.swing.JCheckBox();
         btnSubmit = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
-        outputTest = new javax.swing.JLabel();
+        outputlabel = new javax.swing.JLabel();
         success = new javax.swing.JLabel();
+        btnGoToHome = new javax.swing.JButton();
+        labelType = new javax.swing.JLabel();
+        txtTestType = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Test Title :");
+        labelTitle.setText("Test Title :");
 
-        jLabel2.setText("Test Cost :");
+        labelCost.setText("Test Cost :");
 
-        jLabel3.setText("Available  :");
+        labelAvailable.setText("Available  :");
 
         txtTitle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,10 +62,10 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
             }
         });
 
-        checkBox.setText("Yes");
-        checkBox.addActionListener(new java.awt.event.ActionListener() {
+        checkBoxAvailable.setText("Yes");
+        checkBoxAvailable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkBoxActionPerformed(evt);
+                checkBoxAvailableActionPerformed(evt);
             }
         });
 
@@ -82,6 +85,15 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
 
         success.setForeground(java.awt.Color.green);
 
+        btnGoToHome.setText("Back");
+        btnGoToHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGoToHomeActionPerformed(evt);
+            }
+        });
+
+        labelType.setText("Test type :");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -89,50 +101,64 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(93, 93, 93)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtCost, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(93, 93, 93)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
+                                        .addComponent(labelCost, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(checkBox))
+                                        .addComponent(txtCost, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(184, 184, 184)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(outputTest, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addComponent(checkBoxAvailable))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(6, 6, 6)
+                                                .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(labelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(labelType))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                                            .addComponent(txtTestType)))))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnSubmit)
-                                .addGap(68, 68, 68)
-                                .addComponent(btnCancel)))))
-                .addContainerGap(157, Short.MAX_VALUE))
+                                .addGap(184, 184, 184)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(outputlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(btnSubmit)
+                                        .addGap(68, 68, 68)
+                                        .addComponent(btnCancel)))))
+                        .addGap(0, 151, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnGoToHome)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(105, 105, 105)
+                .addGap(68, 68, 68)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelType)
+                    .addComponent(txtTestType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelCost, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(checkBox))
+                    .addComponent(labelAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(checkBoxAvailable))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -140,8 +166,10 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
                     .addComponent(btnSubmit)
                     .addComponent(btnCancel))
                 .addGap(43, 43, 43)
-                .addComponent(outputTest, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addComponent(outputlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(btnGoToHome)
+                .addContainerGap())
         );
 
         pack();
@@ -163,13 +191,14 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
     } else {
         try {
             String title = txtTitle.getText();
+            String testType = txtTestType.getText();
             double cost = Double.parseDouble(txtCost.getText());
-            boolean isAvailable = checkBox.isSelected();
+            boolean isAvailable = checkBoxAvailable.isSelected();
             
-            PathologicalTest pt = new PathologicalTest(title, cost, isAvailable);
+            PathologicalTest pt = new PathologicalTest(title,testType, cost, isAvailable);
             success.setForeground(java.awt.Color.green);
             success.setText("Add Success!");
-            outputTest.setText(pt.show());
+            outputlabel.setText(pt.show());
             
         } catch (NumberFormatException e) {
             success.setForeground(java.awt.Color.red);
@@ -181,13 +210,18 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
        }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
-    private void checkBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxActionPerformed
+    private void checkBoxAvailableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxAvailableActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_checkBoxActionPerformed
+    }//GEN-LAST:event_checkBoxAvailableActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void btnGoToHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGoToHomeActionPerformed
+        new Home().setVisible(true);
+        this.dispose(); 
+    }//GEN-LAST:event_btnGoToHomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -226,14 +260,17 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnGoToHome;
     private javax.swing.JButton btnSubmit;
-    private javax.swing.JCheckBox checkBox;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel outputTest;
+    private javax.swing.JCheckBox checkBoxAvailable;
+    private javax.swing.JLabel labelAvailable;
+    private javax.swing.JLabel labelCost;
+    private javax.swing.JLabel labelTitle;
+    private javax.swing.JLabel labelType;
+    private javax.swing.JLabel outputlabel;
     private javax.swing.JLabel success;
     private javax.swing.JTextField txtCost;
+    private javax.swing.JTextField txtTestType;
     private javax.swing.JTextField txtTitle;
     // End of variables declaration//GEN-END:variables
 }

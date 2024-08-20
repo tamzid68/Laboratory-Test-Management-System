@@ -78,10 +78,12 @@ public class Home extends javax.swing.JFrame {
 
     private void menuPTestInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPTestInputActionPerformed
        new PathologicalTestSetup().setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_menuPTestInputActionPerformed
 
     private void menuPTestShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPTestShowActionPerformed
         new PathologicalTestSearch().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_menuPTestShowActionPerformed
 
     

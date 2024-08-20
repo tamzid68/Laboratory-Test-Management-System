@@ -5,12 +5,14 @@ package com.hms.model;
 *
 */
 public class PathologicalTest {
-    String title;
-    double cost;
-    boolean isAvailable;
+   private String title;
+   private String testType;
+   private double cost;
+   private boolean isAvailable;
 
-    public PathologicalTest(String title, double cost, boolean isAvailable) {
+    public PathologicalTest(String title,String testType,double cost, boolean isAvailable) {
         this.title = title;
+        this.testType = testType;
         this.cost = cost;
         this.isAvailable = isAvailable;
     }
@@ -18,6 +20,7 @@ public class PathologicalTest {
     public String show() {
         return "<html>" +
                "<strong>Test Name:</strong> " + this.title + "<br>" +
+                "<string>Test type:</string> "+ this.testType+"<br>"+
                "<strong>Cost:</strong> " + String.format("%.2f", this.cost) + "TK<br>" +
                "<strong>Available:</strong> " + (this.isAvailable ? "Yes" : "No") +
                "</html>";
@@ -25,6 +28,7 @@ public class PathologicalTest {
     public String showForSearch(){
         return "Test Name: "+this.title+"\n"+
                 "Cost: "+this.cost+"\n"+
+                "Test type: "+this.testType+"\n"+
                 "Available: "+(this.isAvailable ? "Yes" : "No");
     }
 

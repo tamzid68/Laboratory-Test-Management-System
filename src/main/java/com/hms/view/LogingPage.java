@@ -137,6 +137,7 @@ public class LogingPage extends javax.swing.JFrame {
                 if(pd.isValid(userId.getText(),inputPassword)){
                     logOut.setText("Login Successful!");
                     new Home().setVisible(true);
+                    this.dispose();
             }
                 else
                     logOut.setText("Invalid");

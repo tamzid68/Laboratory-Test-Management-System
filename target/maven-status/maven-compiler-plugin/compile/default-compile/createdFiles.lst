@@ -1,5 +1,6 @@
 com\hms\view\PathologicalTestSetup$5.class
 com\hms\controller\Main.class
+com\hms\view\PathologicalTestSetup$6.class
 com\hms\model\PathologicalTest.class
 com\hms\view\LogingPage$3.class
 com\hms\view\PathologicalTestSearch$2.class
@@ -17,4 +18,5 @@ com\hms\view\LogingPage$1.class
 com\hms\view\Home.class
 com\hms\model\DataStore.class
 com\hms\view\PathologicalTestSetup$3.class
+com\hms\view\PathologicalTestSearch$3.class
 com\hms\view\LogingPage$2.class
