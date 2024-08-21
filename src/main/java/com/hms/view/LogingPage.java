@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.hms.view;
-import com.hms.mdoel.PasswordData;
+import com.hms.model.PasswordData;
 /**
  *
  * @author ASM

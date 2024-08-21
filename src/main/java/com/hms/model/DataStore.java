@@ -11,8 +11,7 @@ public class DataStore {
     public static List<PathologicalTest> tests = new ArrayList<>();
 
     static {
-        tests.add(new PathologicalTest("Blood Test","Boold", 50.0, true));
-        tests.add(new PathologicalTest("X-Ray","SS", 100.0, true));
-        tests.add(new PathologicalTest("MRI","SM", 500.0, false));
+        tests.add(new PathologicalTest("Blood Test", "Hemoglobin", 500, true));
+        tests.add(new PathologicalTest("Urine Test", "Urea", 300, false));
     }
 }
