@@ -20,3 +20,4 @@ com\hms\model\DataStore.class
 com\hms\view\PathologicalTestSetup$3.class
 com\hms\view\PathologicalTestSearch$3.class
 com\hms\view\LogingPage$2.class
+com\hms\view\PathologicalTestSetup$7.class

@@ -17,6 +17,13 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
      */
     public PathologicalTestSetup() {
         initComponents();
+        
+        checkBoxTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{
+            "Blood Test",
+            "Urine Test",
+            "X-Ray",
+            "MRI-Scan"
+        }));
     }
 
     /**
@@ -28,6 +35,8 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        txtTestType = new javax.swing.JComboBox<>();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         labelTitle = new javax.swing.JLabel();
         labelCost = new javax.swing.JLabel();
         labelAvailable = new javax.swing.JLabel();
@@ -40,7 +49,14 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
         success = new javax.swing.JLabel();
         btnGoToHome = new javax.swing.JButton();
         labelType = new javax.swing.JLabel();
-        txtTestType = new javax.swing.JTextField();
+        checkBoxTestType = new javax.swing.JComboBox<>();
+
+        txtTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        txtTestType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTestTypeActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,6 +110,8 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
 
         labelType.setText("Test type :");
 
+        checkBoxTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -113,19 +131,19 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
                                         .addComponent(labelAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addComponent(checkBoxAvailable))
-                                            .addGroup(layout.createSequentialGroup()
                                                 .addGap(6, 6, 6)
-                                                .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                .addComponent(success, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addComponent(checkBoxAvailable))))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(labelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(labelType))
                                         .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
-                                            .addComponent(txtTestType)))))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(checkBoxTestType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(184, 184, 184)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -147,10 +165,10 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelType)
-                    .addComponent(txtTestType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(checkBoxTestType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCost, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -167,7 +185,7 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
                     .addComponent(btnCancel))
                 .addGap(43, 43, 43)
                 .addComponent(outputlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(btnGoToHome)
                 .addContainerGap())
         );
@@ -191,14 +209,14 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
     } else {
         try {
             String title = txtTitle.getText();
-            String testType = txtTestType.getText();
+            String testType = (String)checkBoxTestType.getSelectedItem();
             double cost = Double.parseDouble(txtCost.getText());
             boolean isAvailable = checkBoxAvailable.isSelected();
             
-            PathologicalTest pt = new PathologicalTest(title,testType, cost, isAvailable);
+            PathologicalTest pt = new PathologicalTest(title,testType,cost, isAvailable);
             success.setForeground(java.awt.Color.green);
             success.setText("Add Success!");
-            outputlabel.setText(pt.show());
+            outputlabel.setText(pt.returnLabTestInfo());
             
         } catch (NumberFormatException e) {
             success.setForeground(java.awt.Color.red);
@@ -222,6 +240,10 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
         new Home().setVisible(true);
         this.dispose(); 
     }//GEN-LAST:event_btnGoToHomeActionPerformed
+
+    private void txtTestTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTestTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTestTypeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -262,7 +284,9 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnGoToHome;
     private javax.swing.JButton btnSubmit;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JCheckBox checkBoxAvailable;
+    private javax.swing.JComboBox<String> checkBoxTestType;
     private javax.swing.JLabel labelAvailable;
     private javax.swing.JLabel labelCost;
     private javax.swing.JLabel labelTitle;
@@ -270,7 +294,7 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
     private javax.swing.JLabel outputlabel;
     private javax.swing.JLabel success;
     private javax.swing.JTextField txtCost;
-    private javax.swing.JTextField txtTestType;
+    private javax.swing.JComboBox<String> txtTestType;
     private javax.swing.JTextField txtTitle;
     // End of variables declaration//GEN-END:variables
 }

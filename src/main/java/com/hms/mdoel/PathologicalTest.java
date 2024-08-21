@@ -17,7 +17,7 @@ public class PathologicalTest {
         this.isAvailable = isAvailable;
     }
 
-    public String show() {
+    public String returnLabTestInfo() {
         return "<html>" +
                "<strong>Test Name:</strong> " + this.title + "<br>" +
                 "<string>Test type:</string> "+ this.testType+"<br>"+
