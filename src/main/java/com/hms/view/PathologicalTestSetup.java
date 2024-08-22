@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.hms.view;
-import com.hms.model.PathologicalTest;
+import com.hms.controller.PathologicalTestSetupController;
 
 /**
 * 
@@ -208,15 +208,16 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
         success.setText("Error: All fields are required!");
     } else {
         try {
-            String title = txtTitle.getText();
-            String testType = (String)checkBoxTestType.getSelectedItem();
-            double cost = Double.parseDouble(txtCost.getText());
-            boolean isAvailable = checkBoxAvailable.isSelected();
+            PathologicalTestSetupController pTest = new PathologicalTestSetupController(
+                    txtTitle.getText(),
+                    (String)checkBoxTestType.getSelectedItem(),
+                    Double.parseDouble(txtCost.getText()),
+                    checkBoxAvailable.isSelected()
+            );
             
-            PathologicalTest pt = new PathologicalTest(title,testType,cost, isAvailable);
             success.setForeground(java.awt.Color.green);
             success.setText("Add Success!");
-            outputlabel.setText(pt.returnLabTestInfo());
+            outputlabel.setText(pTest.testSetup());
             
         } catch (NumberFormatException e) {
             success.setForeground(java.awt.Color.red);

@@ -1,5 +1,5 @@
 package com.hms.model;
-import com.hms.model.DataStore;
+
 
 /**
 * 
@@ -29,19 +29,11 @@ public class PathologicalTest extends LabTest{
                "</html>";
     }
     public String showForSearch(){
-        return //"Test Name: "+this.title+"\n"+
-                //"Cost: "+this.cost+"\n"+
-                super.showForSearch()+
-                "Test type: "+this.reagent+"\n";
-                //"Available: "+(this.isAvailable ? "Yes" : "No")+"\n";
+        return "Test Name: "+this.title+"\n"+
+                "Cost: "+this.cost+"\n"+
+                "Test type: "+this.reagent+"\n"+
+                "Available: "+(this.isAvailable ? "Yes" : "No")+"\n";
     }
 
-    public static String search(String title) {
-        for (PathologicalTest test : DataStore.tests) {  // Access the list in DataStore
-            if (test.title.equalsIgnoreCase(title)) {
-                return test.showForSearch();
-            }
-        }
-        return "Not found";
-    }
+   
 }

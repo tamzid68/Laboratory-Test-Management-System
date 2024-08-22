@@ -16,8 +16,8 @@ public class LabTest {
    public LabTest(){}
            
    public LabTest(String title,double cost, boolean isAvailable) {
-        this.title = title;
-        this.cost = cost;
+       this.title = title;
+       this.cost = cost;
        this.isAvailable = isAvailable;
        
     }
@@ -25,5 +25,13 @@ public class LabTest {
         return "Test Name: "+this.title+"\n"+
                 "Cost: "+this.cost+"\n"+
                 "Available: "+(this.isAvailable ? "Yes" : "No")+"\n";
+    }
+   
+    public String returnLabTestInfo() {
+        return "<html>" +
+               "<strong>Test Name:</strong> " + this.title + "<br>" +
+               "<strong>Cost:</strong> " + String.format("%.2f", this.cost) + "TK<br>" +
+               "<strong>Available:</strong> " + (this.isAvailable ? "Yes" : "No") +
+               "</html>";
     }
 }

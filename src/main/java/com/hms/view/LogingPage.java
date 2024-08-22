@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.hms.view;
-import com.hms.model.PasswordData;
+import com.hms.controller.LogingController;
 /**
  *
  * @author ASM
@@ -133,8 +133,8 @@ public class LogingPage extends javax.swing.JFrame {
                 logOut.setText("All fields are required!");
             
             else{
-                PasswordData pd = new PasswordData();
-                if(pd.isValid(userId.getText(),inputPassword)){
+                LogingController pd = new LogingController();
+                if(pd.checker(userId.getText(),inputPassword)){
                     logOut.setText("Login Successful!");
                     new Home().setVisible(true);
                     this.dispose();

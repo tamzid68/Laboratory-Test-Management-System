@@ -3,8 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.hms.view;
-import com.hms.model.DataStore;
-import com.hms.model.PathologicalTest;
+import com.hms.controller.SearchController;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,22 +15,10 @@ public class PathologicalTestSearch extends javax.swing.JFrame {
 
  public PathologicalTestSearch() {
         initComponents();
-        btnSearch.addActionListener(e -> performSearch());
+        
     }
     
-    private void performSearch() {
-        String searchQuery = txtSearch.getText().trim();  // Get the text from the search field
-        if (searchQuery.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please enter a test name to search.");
-            return;
-        }
-
-        // Use the search method from PathologicalTest class that uses DataStore
-        else{
-        String result = PathologicalTest.search(searchQuery);  // Directly call search
-        searchOutput.setText(result);  // Display the result in the text area
-        }
-      }
+      
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -137,7 +124,17 @@ public class PathologicalTestSearch extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-       performSearch();
+         String searchQuery = txtSearch.getText().trim();  // Get the text from the search field
+        if (searchQuery.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter a test name to search.");
+        }
+
+        // Use the search method from PathologicalTest class that uses DataStore
+        else{
+            SearchController sc = new SearchController();
+        String result = sc.search(searchQuery);  // Directly call search
+        searchOutput.setText(result);  // Display the result in the text area
+        }
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
