@@ -1,16 +1,17 @@
 
 package com.hms.view;
-import com.hms.view.PathologicalTestSetup;
+import com.hms.controller.RouteController;
 /**
 * 
 *@author Tamzid
 *
 */
 public class Home extends javax.swing.JFrame {
-
-
+    
+    RouteController route = new RouteController();
     public Home() {
         initComponents();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -77,12 +78,12 @@ public class Home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuPTestInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPTestInputActionPerformed
-       new PathologicalTestSetup().setVisible(true);
+       route.viewLabTesSetup();
        this.dispose();
     }//GEN-LAST:event_menuPTestInputActionPerformed
 
     private void menuPTestShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPTestShowActionPerformed
-        new PathologicalTestSearch().setVisible(true);
+        route.viewSearch();
         this.dispose();
     }//GEN-LAST:event_menuPTestShowActionPerformed
 

@@ -4,18 +4,17 @@
  */
 package com.hms.view;
 import com.hms.controller.PathologicalTestSetupController;
+import com.hms.controller.RouteController;
 
 /**
 * 
 *@author Tamzid
 *
 */
-public class PathologicalTestSetup extends javax.swing.JFrame {
+public class LabTestSetup extends javax.swing.JFrame {
 
-    /**
-     * Creates new form PathologicalTestSetup
-     */
-    public PathologicalTestSetup() {
+    RouteController route = new RouteController();
+    public LabTestSetup() {
         initComponents();
         
         checkBoxTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{
@@ -238,7 +237,7 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnGoToHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGoToHomeActionPerformed
-        new Home().setVisible(true);
+        route.viewHome();
         this.dispose(); 
     }//GEN-LAST:event_btnGoToHomeActionPerformed
 
@@ -263,20 +262,20 @@ public class PathologicalTestSetup extends javax.swing.JFrame {
 //                }
 //            }
 //        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(PathologicalTestSetup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(LabTestSetup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(PathologicalTestSetup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(LabTestSetup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(PathologicalTestSetup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(LabTestSetup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(PathologicalTestSetup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(LabTestSetup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 //        //</editor-fold>
 //
 //        /* Create and display the form */
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
-//                new PathologicalTestSetup().setVisible(true);
+//                new LabTestSetup().setVisible(true);
 //            }
 //        });
 //    }

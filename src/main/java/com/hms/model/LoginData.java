@@ -10,12 +10,12 @@ import java.util.Arrays;
  *
  * @author ASM
  */
-public class PasswordData {
+public class LoginData {
     
     private final String userid="Tamzid";
     private final char[] pass={'1','2','3','a','s','m'};
     
-    public  PasswordData(){
+    public  LoginData(){
     
     }
         public boolean isValid(String user,char[] password){

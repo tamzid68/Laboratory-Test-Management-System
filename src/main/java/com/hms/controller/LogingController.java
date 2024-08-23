@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.hms.controller;
-import com.hms.model.PasswordData;
+import com.hms.model.LoginData;
 
 /**
  *
@@ -15,7 +15,7 @@ public class LogingController {
     
     public boolean checker(String user,char[] password){
         
-        PasswordData pd = new PasswordData();
+        LoginData pd = new LoginData();
         
         if(pd.isValid(user,password)==true)
             return true;

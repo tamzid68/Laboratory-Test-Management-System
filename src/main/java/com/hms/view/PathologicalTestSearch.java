@@ -5,6 +5,7 @@
 package com.hms.view;
 import com.hms.controller.SearchController;
 import javax.swing.JOptionPane;
+import com.hms.controller.RouteController;
 
 /**
 * 
@@ -13,6 +14,7 @@ import javax.swing.JOptionPane;
 */
 public class PathologicalTestSearch extends javax.swing.JFrame {
 
+    RouteController route = new RouteController();
  public PathologicalTestSearch() {
         initComponents();
         
@@ -142,7 +144,7 @@ public class PathologicalTestSearch extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnGoToHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGoToHomeActionPerformed
-        new Home().setVisible(true);
+        route.viewHome();
         this.dispose();
     }//GEN-LAST:event_btnGoToHomeActionPerformed
 

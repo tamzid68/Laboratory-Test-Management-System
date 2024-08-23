@@ -11,14 +11,14 @@ package com.hms.model;
 public class RadiologicalTest extends LabTest{
     
 //   private String title;
-   private String plateDimention;
+   private String imageDimention;
 //   private double cost;
 //     private boolean isAvailable;
 
     public RadiologicalTest
         (String title,String plateDimention,double cost, boolean isAvailable) {
         this.title = title;
-        this.plateDimention = plateDimention;
+        this.imageDimention = plateDimention;
         this.cost = cost;
         this.isAvailable = isAvailable;
     }
@@ -30,7 +30,7 @@ public class RadiologicalTest extends LabTest{
     public String returnLabTestInfo() {
         return "<html>" +
                "<strong>Test Name:</strong> " + this.title + "<br>" +
-                "<string>Plate Dimention:</string> "+ this.plateDimention+"<br>"+
+                "<string>Plate Dimention:</string> "+ this.imageDimention+"<br>"+
                "<strong>Cost:</strong> " + String.format("%.2f", this.cost) + "TK<br>" +
                "<strong>Available:</strong> " + (this.isAvailable ? "Yes" : "No") +
                "</html>";
@@ -38,7 +38,7 @@ public class RadiologicalTest extends LabTest{
     public String showForSearch(){
         return "Test Name: "+this.title+"\n"+
                 "Cost: "+this.cost+"\n"+
-                "Test type: "+this.plateDimention+"\n"+
+                "Test type: "+this.imageDimention+"\n"+
                 "Available: "+(this.isAvailable ? "Yes" : "No")+"\n";
     }
 
