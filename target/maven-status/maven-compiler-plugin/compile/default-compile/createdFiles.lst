@@ -1,6 +1,8 @@
 com\hms\controller\LogingController.class
+com\hms\model\DefineTheEnum$PathologicalTestType.class
 com\hms\model\LoginData.class
 com\hms\controller\PathologicalTestSetupController.class
+com\hms\model\DefineTheEnum$RadiologicalTestType.class
 com\hms\view\PathologicalTestSearch.class
 com\hms\view\PathologicalTestSearch$1.class
 com\hms\view\LabTestSetup$4.class
@@ -19,6 +21,8 @@ com\hms\view\PathologicalTestSearch$2.class
 com\hms\controller\RouteController.class
 com\hms\model\SearchTest.class
 com\hms\model\RadiologicalTest.class
+com\hms\view\LabTestSetup$8.class
+com\hms\model\DefineTheEnum.class
 com\hms\view\Home$1.class
 com\hms\view\LogingPage$1.class
 com\hms\view\Home.class

@@ -5,6 +5,7 @@
 package com.hms.view;
 import com.hms.controller.PathologicalTestSetupController;
 import com.hms.controller.RouteController;
+import com.hms.model.DefineTheEnum.PathologicalTestType;
 
 /**
 * 
@@ -14,17 +15,25 @@ import com.hms.controller.RouteController;
 public class LabTestSetup extends javax.swing.JFrame {
 
     RouteController route = new RouteController();
+    
     public LabTestSetup() {
         initComponents();
-        
-        checkBoxTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{
-            "Blood Test",
-            "Urine Test",
-            "X-Ray",
-            "MRI-Scan"
-        }));
-    }
+        populateTestTypeComboBox();
+       //comboBoxTestType.setModel(new javax.swing.DefaultComboBoxModel<>(comboBoxTestType.validate());
 
+//        checkBoxTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{
+//            "Blood Test",
+//            "Urine Test",
+//            "X-Ray",
+//            "MRI-Scan"
+//        }));
+    }
+ private void populateTestTypeComboBox() {
+        comboBoxTestType.removeAllItems();
+        for (PathologicalTestType testType : PathologicalTestType.values()) {
+            comboBoxTestType.addItem(testType.toString());
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,7 +57,7 @@ public class LabTestSetup extends javax.swing.JFrame {
         success = new javax.swing.JLabel();
         btnGoToHome = new javax.swing.JButton();
         labelType = new javax.swing.JLabel();
-        checkBoxTestType = new javax.swing.JComboBox<>();
+        comboBoxTestType = new javax.swing.JComboBox<>();
 
         txtTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         txtTestType.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +118,12 @@ public class LabTestSetup extends javax.swing.JFrame {
 
         labelType.setText("Test type :");
 
-        checkBoxTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxTestType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxTestTypeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -142,7 +156,7 @@ public class LabTestSetup extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(txtTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(checkBoxTestType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addComponent(comboBoxTestType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(184, 184, 184)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -151,7 +165,7 @@ public class LabTestSetup extends javax.swing.JFrame {
                                         .addComponent(btnSubmit)
                                         .addGap(68, 68, 68)
                                         .addComponent(btnCancel)))))
-                        .addGap(0, 151, Short.MAX_VALUE))
+                        .addGap(0, 148, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnGoToHome)))
@@ -167,7 +181,7 @@ public class LabTestSetup extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelType)
-                    .addComponent(checkBoxTestType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboBoxTestType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCost, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -184,7 +198,7 @@ public class LabTestSetup extends javax.swing.JFrame {
                     .addComponent(btnCancel))
                 .addGap(43, 43, 43)
                 .addComponent(outputlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(btnGoToHome)
                 .addContainerGap())
         );
@@ -209,14 +223,20 @@ public class LabTestSetup extends javax.swing.JFrame {
         try {
             PathologicalTestSetupController pTest = new PathologicalTestSetupController(
                     txtTitle.getText(),
-                    (String)checkBoxTestType.getSelectedItem(),
+                    comboBoxTestType.getSelectedItem().toString(),
                     Double.parseDouble(txtCost.getText()),
                     checkBoxAvailable.isSelected()
+                    
             );
             
             success.setForeground(java.awt.Color.green);
             success.setText("Add Success!");
             outputlabel.setText(pTest.testSetup());
+            // Clear fields after submission
+            txtTitle.setText("");
+            txtCost.setText("");
+            comboBoxTestType.setSelectedIndex(0);
+            checkBoxAvailable.setSelected(false);
             
         } catch (NumberFormatException e) {
             success.setForeground(java.awt.Color.red);
@@ -244,6 +264,10 @@ public class LabTestSetup extends javax.swing.JFrame {
     private void txtTestTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTestTypeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTestTypeActionPerformed
+
+    private void comboBoxTestTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxTestTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxTestTypeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -286,7 +310,7 @@ public class LabTestSetup extends javax.swing.JFrame {
     private javax.swing.JButton btnSubmit;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JCheckBox checkBoxAvailable;
-    private javax.swing.JComboBox<String> checkBoxTestType;
+    private javax.swing.JComboBox<String> comboBoxTestType;
     private javax.swing.JLabel labelAvailable;
     private javax.swing.JLabel labelCost;
     private javax.swing.JLabel labelTitle;

@@ -78,7 +78,7 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="txtTitle" min="-2" pref="216" max="-2" attributes="0"/>
-                                          <Component id="checkBoxTestType" min="-2" max="-2" attributes="0"/>
+                                          <Component id="comboBoxTestType" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -95,7 +95,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="151" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="148" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -117,7 +117,7 @@
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="labelType" min="-2" max="-2" attributes="0"/>
-                  <Component id="checkBoxTestType" min="-2" max="-2" attributes="0"/>
+                  <Component id="comboBoxTestType" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -138,7 +138,7 @@
               </Group>
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Component id="outputlabel" min="-2" pref="103" max="-2" attributes="0"/>
-              <EmptySpace pref="46" max="32767" attributes="0"/>
+              <EmptySpace pref="40" max="32767" attributes="0"/>
               <Component id="btnGoToHome" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -217,7 +217,7 @@
         <Property name="text" type="java.lang.String" value="Test type :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="checkBoxTestType">
+    <Component class="javax.swing.JComboBox" name="comboBoxTestType">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -228,6 +228,9 @@
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxTestTypeActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
