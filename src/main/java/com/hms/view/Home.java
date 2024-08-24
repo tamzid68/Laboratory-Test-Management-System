@@ -35,7 +35,7 @@ public class Home extends javax.swing.JFrame {
         jMenu1.setText("Home");
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Pathological Test");
+        jMenu2.setText("Lab Test Setup");
 
         menuPTestInput.setText("Setup(Input)");
         menuPTestInput.addActionListener(new java.awt.event.ActionListener() {

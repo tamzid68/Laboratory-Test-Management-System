@@ -1,4 +1,6 @@
+com\hms\view\LabTestSetup$9.class
 com\hms\controller\LogingController.class
+com\hms\view\LabTestSetup$10.class
 com\hms\model\DefineTheEnum$PathologicalTestType.class
 com\hms\model\LoginData.class
 com\hms\controller\PathologicalTestSetupController.class
