@@ -45,8 +45,5 @@ public class RouteController {
         }
         return testTypes;
     }
-     
-     public void SaveData(){
-     
-     }
+
 }

@@ -29,9 +29,7 @@ com\hms\view\Home$1.class
 com\hms\view\LogingPage$1.class
 com\hms\view\Home.class
 com\hms\view\LabTestSetup$5.class
-com\hms\model\showForSearch.class
 com\hms\view\LabTestSetup$7.class
-com\hms\model\DataStore.class
 com\hms\controller\SearchController.class
 com\hms\view\LabTestSetup$2.class
 com\hms\model\TestReport.class
