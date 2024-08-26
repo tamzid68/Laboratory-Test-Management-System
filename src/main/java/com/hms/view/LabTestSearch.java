@@ -12,10 +12,10 @@ import com.hms.controller.RouteController;
 *@author Tamzid
 *
 */
-public class PathologicalTestSearch extends javax.swing.JFrame {
+public class LabTestSearch extends javax.swing.JFrame {
 
     RouteController route = new RouteController();
- public PathologicalTestSearch() {
+ public LabTestSearch() {
         initComponents();
         
     }

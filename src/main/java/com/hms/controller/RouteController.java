@@ -6,7 +6,7 @@ package com.hms.controller;
 
 import com.hms.view.Home;
 import com.hms.view.LabTestSetup;
-import com.hms.view.PathologicalTestSearch;
+import com.hms.view.LabTestSearch;
 import com.hms.model.DefineTheEnum.PathologicalTestType;
 import com.hms.model.DefineTheEnum.RadiologicalTestType;
 import java.util.List;
@@ -24,7 +24,7 @@ public class RouteController {
     }
     
     public void viewSearch(){
-    new PathologicalTestSearch().setVisible(true);
+    new LabTestSearch().setVisible(true);
     }
     
     public void viewHome(){
