@@ -3,11 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.hms.view;
-import com.hms.controller.PathologicalTestSetupController;
+import com.hms.controller.LabTestSetupController;
 import com.hms.controller.RouteController;
 import java.util.List;
 import java.util.ArrayList;
-
+import com.hms.model.SaveingData;
+import com.hms.model.TestReport;
 /**
 * 
 *@author Tamzid
@@ -18,6 +19,7 @@ public class LabTestSetup extends javax.swing.JFrame {
     RouteController route = new RouteController();
     
     public LabTestSetup() {
+        
         initComponents();
         //populateTestTypeComboBox();
        //comboBoxTestType.setModel(new javax.swing.DefaultComboBoxModel<>(comboBoxTestType.validate());
@@ -270,7 +272,7 @@ public class LabTestSetup extends javax.swing.JFrame {
         success.setText("Error: All fields are required!");
     } else {
         try {
-            PathologicalTestSetupController pTest = new PathologicalTestSetupController(
+            LabTestSetupController pTest = new LabTestSetupController(
                     txtTitle.getText(),
                     comboBoxTestType.getSelectedItem().toString(),
                     Double.parseDouble(txtCost.getText()),
@@ -282,6 +284,9 @@ public class LabTestSetup extends javax.swing.JFrame {
             success.setText("Add Success!");
             outputlabel.setText(pTest.testSetup());
             // Clear fields after submission
+            
+            pTest.saveFile();//save data
+            
             txtTitle.setText("");
             txtCost.setText("");
             comboBoxTestType.setSelectedIndex(0);
@@ -291,9 +296,8 @@ public class LabTestSetup extends javax.swing.JFrame {
             success.setForeground(java.awt.Color.red);
             success.setText("Error: Invalid cost format!");
        
-       
        }
-       
+        
        }
     }//GEN-LAST:event_btnSubmitActionPerformed
 

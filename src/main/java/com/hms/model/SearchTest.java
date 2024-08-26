@@ -11,7 +11,7 @@ import com.hms.model.DataStore;
 public class SearchTest {
     
      public static String search(String title) {
-        for (PathologicalTest test : DataStore.tests) {  // Access the list in DataStore
+        for (TestReport test : DataStore.tests) {  // Access the list in DataStore
             if (test.title.equalsIgnoreCase(title)) {
                 return test.showForSearch();
             }

@@ -8,7 +8,7 @@ package com.hms.model;
  *
  * @author Tamzid
  */
-public class LabTest {
+public abstract class LabTest {
    protected String title;
    protected double cost;
    protected boolean isAvailable;

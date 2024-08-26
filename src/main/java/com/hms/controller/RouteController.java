@@ -12,6 +12,7 @@ import com.hms.model.DefineTheEnum.RadiologicalTestType;
 import java.util.List;
 import java.util.ArrayList;
 
+
 /**
  *
  * @author ASM
@@ -44,4 +45,8 @@ public class RouteController {
         }
         return testTypes;
     }
+     
+     public void SaveData(){
+     
+     }
 }

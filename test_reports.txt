@@ -1,0 +1,10 @@
+Test Name: asm
+Cost: 5555.0
+Test type: PET Scan
+Available: No
+
+Test Name: hello
+Cost: 55555.0
+Test type: Histopathology
+Available: Yes
+

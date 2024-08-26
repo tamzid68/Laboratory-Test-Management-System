@@ -1,18 +1,19 @@
 package com.hms.model;
-
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
 * 
 *@author Tamzid
 *
 */
-public class PathologicalTest extends LabTest{
+public class TestReport extends LabTest{
 //   private String title;
 //   private double cost;
 //   private boolean isAvailable;
     private String reagent;
 
-    public PathologicalTest(String title,String reagent,double cost, boolean isAvailable) {
+    public TestReport(String title,String reagent,double cost, boolean isAvailable) {
 //        this.title = title;
 //        this.cost = cost;
 //        this.isAvailable = isAvailable;
@@ -21,6 +22,7 @@ public class PathologicalTest extends LabTest{
     }
 
     public String returnLabTestInfo() {
+        
         return "<html>" +
                "<strong>Test Name:</strong> " + this.title + "<br>" +
                 "<string>Test type:</string> "+ this.reagent+"<br>"+
@@ -34,6 +36,7 @@ public class PathologicalTest extends LabTest{
                 "Test type: "+this.reagent+"\n"+
                 "Available: "+(this.isAvailable ? "Yes" : "No")+"\n";
     }
-
+    
+   
    
 }
