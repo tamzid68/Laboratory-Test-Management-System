@@ -9,6 +9,7 @@ import com.hms.view.LabTestSetup;
 import com.hms.view.LabTestSearch;
 import com.hms.model.DefineTheEnum.PathologicalTestType;
 import com.hms.model.DefineTheEnum.RadiologicalTestType;
+import com.hms.view.ListTable;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -19,7 +20,7 @@ import java.util.ArrayList;
  */
 public class RouteController {
     
-    public void viewLabTesSetup(){
+    public void viewLabTestSetup(){
     new LabTestSetup().setVisible(true);
     }
     
@@ -29,6 +30,10 @@ public class RouteController {
     
     public void viewHome(){
     new Home().setVisible(true);
+    }
+    
+    public void ListTable(){
+    new ListTable().setVisible(true);
     }
      public List<String> getPathologicalTestTypes() {
         List<String> testTypes = new ArrayList<>();
@@ -45,5 +50,6 @@ public class RouteController {
         }
         return testTypes;
     }
+     
 
 }

@@ -1,6 +1,4 @@
 package com.hms.model;
-import java.io.FileWriter;
-import java.io.IOException;
 
 /**
 * 
@@ -21,20 +19,26 @@ public class TestReport extends LabTest{
         this.reagent = reagent;
     }
 
+   
+    @Override
     public String returnLabTestInfo() {
-        
-        return "<html>" +
-               "<strong>Test Name:</strong> " + this.title + "<br>" +
-                "<string>Test type:</string> "+ this.reagent+"<br>"+
-               "<strong>Cost:</strong> " + String.format("%.2f", this.cost) + "TK<br>" +
-               "<strong>Available:</strong> " + (this.isAvailable ? "Yes" : "No") +
-               "</html>";
+        return super.returnLabTestInfo();
+//        return "<html>" +
+//               "<strong>Test Name:</strong> " + this.title + "<br>" +
+//                "<string>Test type:</string> "+ this.reagent+"<br>"+
+//               "<strong>Cost:</strong> " + String.format("%.2f", this.cost) + "TK<br>" +
+//               "<strong>Available:</strong> " + (this.isAvailable ? "Yes" : "No") +
+//               "</html>";
     }
+    @Override
     public String showForSearch(){
-        return "Test Name: "+this.title+"\n"+
-                "Cost: "+this.cost+"\n"+
-                "Test type: "+this.reagent+"\n"+
-                "Available: "+(this.isAvailable ? "Yes" : "No")+"\n";
+        
+         return super.showForSearch();
+        
+//        return "Test Name: "+this.title+"\n"+
+//                "Cost: "+this.cost+"\n"+
+//                "Test type: "+this.reagent+"\n"+
+//                "Available: "+(this.isAvailable ? "Yes" : "No")+"\n";
     }
     
    
