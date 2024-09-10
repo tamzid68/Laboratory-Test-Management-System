@@ -27,7 +27,8 @@ public abstract class LabTest {
                 "Available: "+(this.isAvailable ? "Yes" : "No")+"\n";
     }
    
-    public String returnLabTestInfo() {
+   @Override
+    public String toString() {
         return "<html>" +
                "<strong>Test Name:</strong> " + this.title + "<br>" +
                "<strong>Cost:</strong> " + String.format("%.2f", this.cost) + "TK<br>" +

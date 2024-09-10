@@ -28,10 +28,10 @@ public class LabTestSetupController {
     
         TestReport pTest = new TestReport(title,testType,cost, isAvailable);
         
-        if(pTest.returnLabTestInfo().isEmpty())
+        if(pTest.toString().isEmpty())
             return "error with Data base";
         else
-            return pTest.returnLabTestInfo();
+            return pTest.toString();
         
     }
     public void saveFile(){

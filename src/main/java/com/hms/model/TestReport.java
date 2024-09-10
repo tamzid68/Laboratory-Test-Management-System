@@ -21,8 +21,8 @@ public class TestReport extends LabTest{
 
    
     @Override
-    public String returnLabTestInfo() {
-        return super.returnLabTestInfo();
+    public String toString() {
+        return super.toString();
 //        return "<html>" +
 //               "<strong>Test Name:</strong> " + this.title + "<br>" +
 //                "<string>Test type:</string> "+ this.reagent+"<br>"+
@@ -33,12 +33,12 @@ public class TestReport extends LabTest{
     @Override
     public String showForSearch(){
         
-         return super.showForSearch();
+         //return super.showForSearch();
         
-//        return "Test Name: "+this.title+"\n"+
-//                "Cost: "+this.cost+"\n"+
-//                "Test type: "+this.reagent+"\n"+
-//                "Available: "+(this.isAvailable ? "Yes" : "No")+"\n";
+        return "Test Name: "+this.title+"\n"+
+                "Cost: "+this.cost+"\n"+
+                "Test type: "+this.reagent+"\n"+
+                "Available: "+(this.isAvailable ? "Yes" : "No")+"\n";
     }
     
    

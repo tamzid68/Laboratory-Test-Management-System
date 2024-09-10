@@ -1,19 +1,18 @@
-G:\game\project\PHMS\HMS\src\main\java\com\hms\view\LogingPage.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\controller\LogingController.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\model\DefineTheEnum.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\controller\RouteController.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\view\Home.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\model\LabTest.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\model\GetDataAll.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\model\SaveingData.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\view\LabTestSearch.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\controller\Main.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\view\LabTestSetup.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\view\ListTable.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\controller\SearchController.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\view\RouterController.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\controller\TableController.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\model\TestReport.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\model\SearchTest.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\controller\LabTestSetupController.java
-G:\game\project\PHMS\HMS\src\main\java\com\hms\model\LoginData.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\controller\RouteController.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\view\Home.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\model\SaveingData.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\controller\SearchController.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\view\LabTestSearch.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\model\LabTest.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\view\LabTestSetup.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\model\TestReport.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\controller\TableController.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\model\DefineTheEnum.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\model\GetDataAll.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\model\SearchTest.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\model\LoginData.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\view\ListTable.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\controller\LogingController.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\controller\Main.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\controller\LabTestSetupController.java
+C:\Users\Hello World\Documents\NetBeansProjects\HospitalManagementSoftware\src\main\java\com\hms\view\LogingPage.java

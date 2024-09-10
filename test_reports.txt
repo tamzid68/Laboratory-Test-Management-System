@@ -45,7 +45,16 @@ Test Name: test123
 Cost: 500.0
 Available: Yes
 
-Test Name: 123test
-Cost: 2555.0
+Test Name: test
+Cost: 324234.0
+Available: Yes
+
+Test Name: aaa
+Cost: 244.0
+Available: Yes
+
+Test Name: sss
+Cost: 5000.0
+Test type: Culture Test
 Available: Yes
 

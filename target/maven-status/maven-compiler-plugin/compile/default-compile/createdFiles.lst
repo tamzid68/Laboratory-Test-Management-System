@@ -40,4 +40,3 @@ com\hms\controller\SearchController.class
 com\hms\view\Home$3.class
 com\hms\view\LabTestSetup$2.class
 com\hms\model\TestReport.class
-com\hms\view\RouterController.class

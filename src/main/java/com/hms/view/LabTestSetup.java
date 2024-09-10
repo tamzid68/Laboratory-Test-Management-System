@@ -163,7 +163,7 @@ public class LabTestSetup extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Test Type:");
+        jLabel1.setText("Test Group");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
