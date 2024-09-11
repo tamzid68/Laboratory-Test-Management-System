@@ -12,8 +12,8 @@ import java.io.IOException;
  * @author ASM
  */
 public class SaveingData {
-    
-   public static void saveToFile(String data) {
+
+    public static void saveToFile(String data) {
         try (FileWriter writer = new FileWriter("test_reports.txt", true)) {
             writer.write(data + "\n");
             System.out.println("Data saved successfully.");

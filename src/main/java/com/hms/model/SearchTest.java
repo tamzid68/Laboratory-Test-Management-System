@@ -4,17 +4,19 @@
  */
 package com.hms.model;
 //import com.hms.model.DataStore;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+
 /**
  *
  * @author ASM
  */
 public class SearchTest {
-    
-     public static String search(String title) {
-           StringBuilder result = new StringBuilder();
+
+    public static String search(String title) {
+        StringBuilder result = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new FileReader("test_reports.txt"))) {
             String line;
             boolean found = false;

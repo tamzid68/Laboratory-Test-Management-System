@@ -17,6 +17,7 @@ public class ListTable extends javax.swing.JFrame {
      * Creates new form ListTable
      */
     RouteController route = new RouteController();
+
     public ListTable() {
         initComponents();
         loadData();
@@ -25,12 +26,12 @@ public class ListTable extends javax.swing.JFrame {
     private void updateTable(Object[][] data) {
         if (data != null) {
             // Create a new table model with the new data
-            String[] columnNames = { "Test Name", "Test Type", "Cost", "Available" };
+            String[] columnNames = {"Test Name", "Test Type", "Cost", "Available"};
             javax.swing.table.DefaultTableModel model = new javax.swing.table.DefaultTableModel(data, columnNames);
             testTable.setModel(model);
         } else {
             // Clear the table if no data is found
-            String[] columnNames = { "Test Name", "Test Type", "Cost", "Available" };
+            String[] columnNames = {"Test Name", "Test Type", "Cost", "Available"};
             javax.swing.table.DefaultTableModel model = new javax.swing.table.DefaultTableModel(null, columnNames);
             testTable.setModel(model);
         }
@@ -39,9 +40,10 @@ public class ListTable extends javax.swing.JFrame {
     // Load data when the form is opened
     private void loadData() {
         TableController table = new TableController();
-            Object[][] result =table.getData(); // Get all test data
+        Object[][] result = table.getData(); // Get all test data
         updateTable(result);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

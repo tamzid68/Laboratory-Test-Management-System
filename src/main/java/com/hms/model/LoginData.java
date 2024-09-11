@@ -11,24 +11,22 @@ import java.util.Arrays;
  * @author ASM
  */
 public class LoginData {
-    
-    private final String userid="Tamzid";
-    private final char[] pass={'1','2','3','a','s','m'};
-    
-    public  LoginData(){
-    
+
+    private final String userid = "Tamzid";
+    private final char[] pass = {'1', '2', '3', 'a', 's', 'm'};
+
+    public LoginData() {
+
     }
-        public boolean isValid(String user,char[] password){
-            boolean validUser = this.userid.equals(user);
-            boolean validPass = Arrays.equals(this.pass,password);
-            
-            Arrays.fill(password, '0');
-            
-            return validUser && validPass;
-            
-            
-        }
-     
-    
-    
+
+    public boolean isValid(String user, char[] password) {
+        boolean validUser = this.userid.equals(user);
+        boolean validPass = Arrays.equals(this.pass, password);
+
+        Arrays.fill(password, '0');
+
+        return validUser && validPass;
+
+    }
+
 }

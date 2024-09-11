@@ -3,26 +3,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.hms.view;
+
 import com.hms.controller.LabTestSetupController;
 import com.hms.controller.RouteController;
 import java.util.List;
 import java.util.ArrayList;
 import com.hms.model.SaveingData;
 import com.hms.model.TestReport;
+
 /**
-* 
-*@author Tamzid
-*
-*/
+ *
+ * @author Tamzid
+ *
+ */
 public class LabTestSetup extends javax.swing.JFrame {
 
     RouteController route = new RouteController();
-    
+
     public LabTestSetup() {
-        
+
         initComponents();
         //populateTestTypeComboBox();
-       //comboBoxTestType.setModel(new javax.swing.DefaultComboBoxModel<>(comboBoxTestType.validate());
+        //comboBoxTestType.setModel(new javax.swing.DefaultComboBoxModel<>(comboBoxTestType.validate());
 
 //        checkBoxTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{
 //            "Blood Test",
@@ -31,13 +33,14 @@ public class LabTestSetup extends javax.swing.JFrame {
 //            "MRI-Scan"
 //        }));
     }
-   private void populateTestTypeComboBox(List<String> testTypes) {
+
+    private void populateTestTypeComboBox(List<String> testTypes) {
         comboBoxTestType.removeAllItems();
         for (String testType : testTypes) {
             comboBoxTestType.addItem(testType);
         }
-   }
- 
+    }
+
     private void updateTestTypeComboBox(String type) {
         List<String> testTypes = new ArrayList<>();
         if ("Pathological".equals(type)) {
@@ -49,8 +52,9 @@ public class LabTestSetup extends javax.swing.JFrame {
                 testTypes.add(testType);
             }
         }
-            populateTestTypeComboBox(testTypes);
+        populateTestTypeComboBox(testTypes);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -266,39 +270,38 @@ public class LabTestSetup extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCostActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-      
-       if (txtTitle.getText().isEmpty() || txtCost.getText().isEmpty()) {
-        success.setForeground(java.awt.Color.red);
-        success.setText("Error: All fields are required!");
-    } else {
-        try {
-            LabTestSetupController pTest = new LabTestSetupController(
-                    txtTitle.getText(),
-                    comboBoxTestType.getSelectedItem().toString(),
-                    Double.parseDouble(txtCost.getText()),
-                    checkBoxAvailable.isSelected()
-                    
-            );
-            
-            success.setForeground(java.awt.Color.green);
-            success.setText("Add Success!");
-            outputlabel.setText(pTest.testSetup());
-            // Clear fields after submission
-            
-            pTest.saveFile();//save data
-            
-            txtTitle.setText("");
-            txtCost.setText("");
-            comboBoxTestType.setSelectedIndex(0);
-            checkBoxAvailable.setSelected(false);
-            
-        } catch (NumberFormatException e) {
+
+        if (txtTitle.getText().isEmpty() || txtCost.getText().isEmpty()) {
             success.setForeground(java.awt.Color.red);
-            success.setText("Error: Invalid cost format!");
-       
-       }
-        
-       }
+            success.setText("Error: All fields are required!");
+        } else {
+            try {
+                LabTestSetupController pTest = new LabTestSetupController(
+                        txtTitle.getText(),
+                        comboBoxTestType.getSelectedItem().toString(),
+                        Double.parseDouble(txtCost.getText()),
+                        checkBoxAvailable.isSelected()
+                );
+
+                success.setForeground(java.awt.Color.green);
+                success.setText("Add Success!");
+                outputlabel.setText(pTest.testSetup());
+                // Clear fields after submission
+
+                pTest.saveFile();//save data
+
+                txtTitle.setText("");
+                txtCost.setText("");
+                comboBoxTestType.setSelectedIndex(0);
+                checkBoxAvailable.setSelected(false);
+
+            } catch (NumberFormatException e) {
+                success.setForeground(java.awt.Color.red);
+                success.setText("Error: Invalid cost format!");
+
+            }
+
+        }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void checkBoxAvailableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxAvailableActionPerformed
@@ -311,7 +314,7 @@ public class LabTestSetup extends javax.swing.JFrame {
 
     private void btnGoToHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGoToHomeActionPerformed
         route.viewHome();
-        this.dispose(); 
+        this.dispose();
     }//GEN-LAST:event_btnGoToHomeActionPerformed
 
     private void txtTestTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTestTypeActionPerformed

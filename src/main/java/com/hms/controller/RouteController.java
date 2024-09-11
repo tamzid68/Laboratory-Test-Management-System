@@ -13,43 +13,42 @@ import com.hms.view.ListTable;
 import java.util.List;
 import java.util.ArrayList;
 
-
 /**
  *
  * @author ASM
  */
 public class RouteController {
-    
-    public void viewLabTestSetup(){
-    new LabTestSetup().setVisible(true);
+
+    public void viewLabTestSetup() {
+        new LabTestSetup().setVisible(true);
     }
-    
-    public void viewSearch(){
-    new LabTestSearch().setVisible(true);
+
+    public void viewSearch() {
+        new LabTestSearch().setVisible(true);
     }
-    
-    public void viewHome(){
-    new Home().setVisible(true);
+
+    public void viewHome() {
+        new Home().setVisible(true);
     }
-    
-    public void ListTable(){
-    new ListTable().setVisible(true);
+
+    public void ListTable() {
+        new ListTable().setVisible(true);
     }
-     public List<String> getPathologicalTestTypes() {
+
+    public List<String> getPathologicalTestTypes() {
         List<String> testTypes = new ArrayList<>();
         for (PathologicalTestType type : PathologicalTestType.values()) {
             testTypes.add(type.toString());
         }
         return testTypes;
     }
-     
-     public List<String> getRadiologicalTestType() {
+
+    public List<String> getRadiologicalTestType() {
         List<String> testTypes = new ArrayList<>();
         for (RadiologicalTestType type : RadiologicalTestType.values()) {
             testTypes.add(type.toString());
         }
         return testTypes;
     }
-     
 
 }

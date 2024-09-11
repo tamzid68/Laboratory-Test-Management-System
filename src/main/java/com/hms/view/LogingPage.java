@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.hms.view;
+
 import com.hms.controller.LogingController;
+
 /**
  *
  * @author ASM
@@ -126,33 +128,30 @@ public class LogingPage extends javax.swing.JFrame {
     }//GEN-LAST:event_userIdActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        
-        char[] inputPassword =password.getPassword();
-        try{
-            if(userId.getText().isEmpty() || inputPassword.length ==0 )
+
+        char[] inputPassword = password.getPassword();
+        try {
+            if (userId.getText().isEmpty() || inputPassword.length == 0) {
                 logOut.setText("All fields are required!");
-            
-            else{
+            } else {
                 LogingController pd = new LogingController();
-                if(pd.checker(userId.getText(),inputPassword)){
+                if (pd.checker(userId.getText(), inputPassword)) {
                     logOut.setText("Login Successful!");
                     new Home().setVisible(true);
                     this.dispose();
-            }
-                else
+                } else {
                     logOut.setText("Invalid");
+                }
             }
-            
+
+        } finally {
+            java.util.Arrays.fill(inputPassword, '0');
         }
-        finally{
-         java.util.Arrays.fill(inputPassword, '0');
-    }
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnExitActionPerformed
-
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

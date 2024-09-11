@@ -9,6 +9,7 @@ package com.hms.model;
  * @author ASM
  */
 public class DefineTheEnum {
+
     public enum PathologicalTestType {
         BLOOD_TEST("Blood Test"),
         URINALYSIS("Urinalysis"),
@@ -30,14 +31,14 @@ public class DefineTheEnum {
             this.displayName = displayName;
         }
 
-         //Method to return the display name
+        //Method to return the display name
         @Override
         public String toString() {
             return displayName;
         }
     }
-    
-    public enum RadiologicalTestType{
+
+    public enum RadiologicalTestType {
         X_RAY("X-Ray"),
         CT_SCAN("CT Scan"),
         MRI("MRI"),
@@ -61,5 +62,5 @@ public class DefineTheEnum {
             return displayName;
         }
     }
-    
+
 }
