@@ -11,8 +11,7 @@ import com.hms.model.LoginData;
  * @author ASM
  */
 public class LogingController {
-//    private String userId;
-//    private char[] password;
+
 
     public boolean checker(String user, char[] password) {
 
