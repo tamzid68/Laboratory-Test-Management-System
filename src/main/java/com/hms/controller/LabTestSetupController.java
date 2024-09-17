@@ -17,7 +17,7 @@ public class LabTestSetupController {
     private double cost;
     private boolean isAvailable;
     private String testType;
-    //public String name ="labData";
+    
 
     public LabTestSetupController(String title, String testType, double cost, boolean isAvailable) {
         this.title = title;
