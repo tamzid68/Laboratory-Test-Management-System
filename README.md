@@ -15,10 +15,6 @@ The Hospital Management System (HMS) is a Java-based application designed to man
 - **Java Swing**: For the graphical user interface (GUI).
 - **BufferedReader & FileWriter**: For reading from and writing to text files.
 
-## Project Structure
-The project is structured as follows:
-
-hospital-management-system/ ├── src/ │ ├── com/ │ │ └── hms/ │ │ ├── controller/ │ │ │ ├── LogingController.java │ │ │ ├── Main.java │ │ │ ├── RouteController.java │ │ │ ├── SearchController.java │ │ │ └── TableController.java │ │ ├── model/ │ │ │ ├── DefineTheEnum.java │ │ │ ├── GetDataAll.java │ │ │ ├── LabTest.java │ │ │ ├── SavingData.java │ │ │ ├── SearchTest.java │ │ │ ├── TestReport.java │ │ │ └── LoginData.java │ │ └── view/ │ │ ├── LogingPage.java │ │ ├── Home.java │ │ ├── LabTestSetup.java │ │ ├── LabTestSearch.java │ │ └── ListTable.java ├── test_reports.txt └── README.md
 
 ## Getting Started
 
