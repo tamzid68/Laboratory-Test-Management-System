@@ -18,27 +18,9 @@ The Hospital Management System (HMS) is a Java-based application designed to man
 ## Project Structure
 The project is structured as follows:
 
-com.hms
-├── controller
-│   ├── LogingController.java
-│   ├── Main.java
-│   ├── RouteController.java
-│   ├── SearchController.java
-│   └── TableController.java
-├── model
-│   ├── DefineTheEnum.java
-│   ├── GetDataAll.java
-│   ├── LabTest.java
-│   ├── SaveingData.java
-│   ├── SearchTest.java
-│   ├── TestReport.java
-│   └── LoginData.java
-└── view
-    ├── LogingPage.java
-    ├── Home.java
-    ├── LabTestSetup.java
-    ├── LabTestSearch.java
-    └── ListTable.java
+com.hms ├── controller │ ├── LogingController.java │ ├── Main.java │ ├── RouteController.java │ ├── SearchController.java │ └── TableController.java ├── model │ ├── DefineTheEnum.java │ ├── GetDataAll.java │ ├── LabTest.java │ ├── SaveingData.java │ ├── SearchTest.java │ ├── TestReport.java │ └── LoginData.java └── view ├── LogingPage.java ├── Home.java ├── LabTestSetup.java ├── LabTestSearch.java └── ListTable.java
+
+
 
 
 ## Getting Started
